@@ -1,0 +1,1 @@
+Secrets à configurer (Phase2): GITHUB_TOKEN, GPG_PRIVATE_KEY, COSIGN_PASSWORD.

@@ -1,0 +1,5 @@
+*.pem
+*.key
+private.gpg
+__pycache__/
+*.pyc
