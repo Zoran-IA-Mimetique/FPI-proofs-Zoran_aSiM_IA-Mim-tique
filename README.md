@@ -10,6 +10,37 @@ Les résultats sont transparents :
 - ⚠️ **Subjectifs** : jugements de style ou qualité, non mesurables.
 
 ---
+# 🔐 ZORAN Trace
+
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-green.svg)
+[![Made with ❤️ by Zoran](https://img.shields.io/badge/Made%20with-❤️-red)](mailto:tabary01@gmail.com)
+
+ZORAN Trace est un outil **open-source de traçabilité cryptographique** permettant de :
+- Calculer des **racines Merkle** sur vos artefacts (fichiers, JSON, CSV, emails).
+- Générer automatiquement des **audit logs** enrichis.
+- Ajouter des **signatures quotidiennes automatiques (HMAC)** avec `--auto-sign`.
+- Publier vos preuves dans **Rekor** ou tout registre append-only.
+
+---
+
+## 🚀 Fonctionnalités principales
+
+- ✅ Calcul automatique des **hashes SHA-256** et racines Merkle.
+- ✅ Génération d’`audit_log_merkle.json` par dossier ou en lot.
+- ✅ Signature HMAC **quotidienne** simple (1 mot de passe/jour → 50+ signatures automatiques).
+- ✅ Mode `batch_sign` pour signer en masse plusieurs fichiers.
+- ✅ Compatible avec CI/CD, Zenodo, GitHub Actions, Rekor.
+
+---
+
+## 📦 Installation
+
+Clonez le dépôt :
+
+```bash
+git clone https://github.com/Zoran-IA-Mimetique/zoran-trace.git
+cd zoran-trace
 
 ## 📂 Contenu
 
