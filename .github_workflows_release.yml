@@ -1,0 +1,41 @@
+name: Prepublish & Release Zoran Trace
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_and_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install deps
+        run: pip install cryptography
+      - name: Run prepublish checks
+        run: python3 prepublish_checks.py
+      - name: Build artifacts and Merkle log
+        run: python3 zoran_trace.py artifacts
+      - name: Upload artifact for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: zoran-artifacts
+          path: audit_log_merkle.json
+
+  publish_rekor:
+    needs: build_and_check
+    runs-on: ubuntu-latest
+    environment:
+      name: release
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: zoran-artifacts
+      - name: Sign root with cosign and upload to Rekor
+        run: |
+          echo "Signing Merkle root and uploading to Rekor..."
+          cosign sign-blob --key ${{ secrets.COSIGN_KEY }} audit_log_merkle.json --rekor-url https://rekor.sigstore.dev
