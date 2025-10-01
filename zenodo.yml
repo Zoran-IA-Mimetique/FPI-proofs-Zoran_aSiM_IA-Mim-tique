@@ -1,0 +1,40 @@
+name: Publish to Zenodo
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-zenodo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create deposition on Zenodo
+        run: |
+          curl -s -H "Content-Type: application/json"                -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}"                -X POST https://zenodo.org/api/deposit/depositions                -d '{
+                 "metadata": {
+                   "title": "ZORAN Trace v${{ github.event.release.tag_name }}",
+                   "upload_type": "software",
+                   "description": "ZORAN Trace avec --auto-sign et batch_sign pour signatures automatiques quotidiennes.",
+                   "creators": [
+                     {"name": "Tabary, Frédéric", "affiliation": "Institut IA Mimétique"}
+                   ]
+                 }
+               }' > deposition.json
+
+          echo "Deposition created:"
+          cat deposition.json
+
+      - name: Upload files to Zenodo
+        run: |
+          BUCKET_URL=$(jq -r .links.bucket deposition.json)
+          curl -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}"                -X PUT --data-binary @zoran_trace_autosign.py $BUCKET_URL/zoran_trace_autosign.py
+          curl -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}"                -X PUT --data-binary @RELEASE_NOTES_v1.2.md $BUCKET_URL/RELEASE_NOTES_v1.2.md
+          curl -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}"                -X PUT --data-binary @README.md $BUCKET_URL/README.md
+
+      - name: Publish deposition
+        run: |
+          DEP_ID=$(jq -r .id deposition.json)
+          curl -H "Authorization: Bearer ${{ secrets.ZENODO_TOKEN }}"                -X POST https://zenodo.org/api/deposit/depositions/$DEP_ID/actions/publish
