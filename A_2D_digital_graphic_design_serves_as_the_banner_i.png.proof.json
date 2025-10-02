@@ -1,16 +1,16 @@
 {
   "filename": "A_2D_digital_graphic_design_serves_as_the_banner_i.png",
   "file_hash": "b4a972a3a0622df79ab9e3066c1a40ea166f456c0566221f25948f50ef7ce599c8613dd32a65a29dddc08934936a050aa2f1d02b894dc45b55f996957b9d701a",
-  "root": "d45f7be1a80983b19e9947d015451d94cdaf43715f70dbb61fd30693aeebcda2dab7114328455dcede4144aaacad94b1f1f0d527a4d80a9f93d4d9d9b20b5960",
-  "index": 2,
+  "root": "6cabde9937dcf15133c8e67db2f7278d084384d1c20b5bb3acb7a8768f09b98fe295c3bb13ac198b2d9782e8b3a17256cb572ac9e0b41e69a54b8d70c6fc0560",
+  "index": 1,
   "proof": [
     {
-      "sibling_index": 2,
-      "sibling_hash": "b4a972a3a0622df79ab9e3066c1a40ea166f456c0566221f25948f50ef7ce599c8613dd32a65a29dddc08934936a050aa2f1d02b894dc45b55f996957b9d701a"
+      "sibling_index": 0,
+      "sibling_hash": "44f9f52f5a3208c65a6ca86460903d0e370158300775f5feb7f26b72a339b2df1a4d090cffc2ba440d6882e331e2d3068cda678414b857d13396ae8d0bc50142"
     },
     {
-      "sibling_index": 0,
-      "sibling_hash": "f757eebc00444ec4a27314036e44f49053ed92338ef2543269b86ec0cc97fea62fb3642dda1862e82bac0f1ca55791cd09276817d1580134c214636951ebf12f"
+      "sibling_index": 1,
+      "sibling_hash": "33513dcd2abb32796f7ec1d348274a83338835b1eff55534f7a9887b31437637e05c109bcc15bb7740acffe505ef4b39feac66b388afe382c938150329be0207"
     }
   ]
 }
