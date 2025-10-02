@@ -1,9 +1,27 @@
 {
-  "root": "<MERKLE_ROOT_PLACEHOLDER>",
-  "entries": [],
+  "root": "d45f7be1a80983b19e9947d015451d94cdaf43715f70dbb61fd30693aeebcda2dab7114328455dcede4144aaacad94b1f1f0d527a4d80a9f93d4d9d9b20b5960",
+  "entries": [
+    {
+      "filename": "WhitePaper-Projet-ZORAN-aSiM-Injecteur-Cellule-Souche-Tracabilite-et-Verifiabilite-Ethique-by-Design.pdf",
+      "sha512": "44f9f52f5a3208c65a6ca86460903d0e370158300775f5feb7f26b72a339b2df1a4d090cffc2ba440d6882e331e2d3068cda678414b857d13396ae8d0bc50142",
+      "timestamp": "2025-10-02T12:31:29.992145Z"
+    },
+    {
+      "filename": "A_digital_graphic_design_displays_a_promotional_ba.png",
+      "sha512": "40acd34862d0a794c001f0be0c0df607dd318fea5f94ccfafc317363193ec8851e232ddcd6cb4dca54b21342625c1146585428a5efc3090b099ad80ce2cdb9cf",
+      "timestamp": "2025-10-02T12:31:29.992152Z"
+    },
+    {
+      "filename": "A_2D_digital_graphic_design_serves_as_the_banner_i.png",
+      "sha512": "b4a972a3a0622df79ab9e3066c1a40ea166f456c0566221f25948f50ef7ce599c8613dd32a65a29dddc08934936a050aa2f1d02b894dc45b55f996957b9d701a",
+      "timestamp": "2025-10-02T12:31:29.992154Z"
+    }
+  ],
   "signatures": [],
-  "external_proofs": {},
-  "canonicalization_spec": "zoran-canon-v1",
-  "tooling_version": "trace_v1.2",
-  "subject": "example"
+  "external_proofs": [],
+  "canonicalization_spec": {
+    "encoding": "UTF-8",
+    "newline": "LF"
+  },
+  "tooling_version": "zoran_stub_1.0"
 }

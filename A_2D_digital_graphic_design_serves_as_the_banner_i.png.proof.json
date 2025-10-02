@@ -1,0 +1,16 @@
+{
+  "filename": "A_2D_digital_graphic_design_serves_as_the_banner_i.png",
+  "file_hash": "b4a972a3a0622df79ab9e3066c1a40ea166f456c0566221f25948f50ef7ce599c8613dd32a65a29dddc08934936a050aa2f1d02b894dc45b55f996957b9d701a",
+  "root": "d45f7be1a80983b19e9947d015451d94cdaf43715f70dbb61fd30693aeebcda2dab7114328455dcede4144aaacad94b1f1f0d527a4d80a9f93d4d9d9b20b5960",
+  "index": 2,
+  "proof": [
+    {
+      "sibling_index": 2,
+      "sibling_hash": "b4a972a3a0622df79ab9e3066c1a40ea166f456c0566221f25948f50ef7ce599c8613dd32a65a29dddc08934936a050aa2f1d02b894dc45b55f996957b9d701a"
+    },
+    {
+      "sibling_index": 0,
+      "sibling_hash": "f757eebc00444ec4a27314036e44f49053ed92338ef2543269b86ec0cc97fea62fb3642dda1862e82bac0f1ca55791cd09276817d1580134c214636951ebf12f"
+    }
+  ]
+}
